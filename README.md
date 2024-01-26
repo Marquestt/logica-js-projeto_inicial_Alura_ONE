@@ -1,1 +1,1 @@
-Projeto de JavaScript desenvolvido pelo curso do Alura ONE!
+Projeto de JavaScript de número sorteado desenvolvido pelo curso Iniciante em Lógica de Programação Com JavaScript do programa ONE - Oracle Next Education em parceria com Alura!
