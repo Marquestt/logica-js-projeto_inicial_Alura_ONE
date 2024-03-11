@@ -9,27 +9,34 @@ let tentativas = 1;
 while(chute != numeroSecreto){
     chute = prompt(`Escolha um número entre 1 e ${numeroMaximo}`);
 
-    if (chute < 0) {
-        alert('Ops, número inválido! Escolha um valor maior que 0!');
-        }
-    else if (chute > numeroMaximo) {
-        alert(`Ops, número inválido! Escolha um valor menor que ${numeroMaximo}`);
+    if (chute == null || chute == "") {
+        alert(`Ops, digite um valor entre 0 e ${numeroMaximo}`)
     }
-    else {
-        //se o chute for igual ao número secreto
-        if (numeroSecreto == chute){
-            break;
+    else { 
+        if (chute < 0) {
+            alert('Ops, número inválido! Escolha um valor maior que 0!');
+            continue;
+            }
+        else if (chute > numeroMaximo) {
+            alert(`Ops, número inválido! Escolha um valor menor que ${numeroMaximo}`);
+            continue;
         }
-        //senão
         else {
-            if (chute > numeroSecreto){
-                alert(`O número secreto é menor que ${chute}`);
+            //se o chute for igual ao número secreto
+            if (numeroSecreto == chute){
+                break;
             }
+            //senão
             else {
-                alert(`O número secreto é maior que ${chute}`);
+                if (chute > numeroSecreto){
+                    alert(`O número secreto é menor que ${chute}`);
+                }
+                else {
+                    alert(`O número secreto é maior que ${chute}`);
+                }
+                //tentativas = tentativas +1;
+                tentativas++;
             }
-            //tentativas = tentativas +1;
-            tentativas++;
         }
     }
 }
